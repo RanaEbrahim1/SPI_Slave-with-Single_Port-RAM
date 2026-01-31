@@ -134,30 +134,3 @@ always @(posedge clk) begin
   end
 end
 endmodule
-
-     /* if (control_read) begin
-        if (count < 10) begin
-          shift_reg <= {shift_reg[8:0] , MOSI};
-          rx_valid <= 1'b0;
-          count <= count+1;
-        end 
-        else begin
-          count <= 1'b0;
-          rx_valid <= 1'b1;
-          rx_data <= shift_reg;
-        end
-      end  
-      else if (tx_valid) begin
-        shift_reg <= {2'b00, tx_data};
-        rx_valid <= 1'b0;
-      end  
-      else begin
-        rx_valid <= 1'b0;
-        if (count < 8) begin
-          MISO <= tx_data[7 - count];
-          count <= count+1;
-        end
-        else begin
-          count <= 4'b0;
-        end
-      end*/
